@@ -1,58 +1,52 @@
-const digit  = document.querySelectorAll('digit');
+const digit = document.querySelectorAll('.digit');
 
-msten = 0;
-mshuned = 0;
+ms10 = 0;
+ms100 = 0;
 sec1 = 0;
 sec10 = 0;
 
-digit[0].textContent = sec10;
-digit[1].textContent = sec1;
-digit[3].textContent = mshuned;
-digit[4].textContent = msten;
+digit[0].innerHTML = sec10;
+digit[1].innerHTML = sec1;
+digit[3].innerHTML = ms100;
+digit[4].innerHTML = ms10;
 
-
-function  mstenfunc () 
+function ms10func ()
 {
-    msten++
-    if(msten >= 10) {
-        msten = 0;
-    }
-
-    digit[3].textContent = msten;
+  ms10++
+  if(ms10 >= 10) {
+    ms10 = 0;
+  }
+  digit[3].innerHTML = ms10; 
 }
 
-function mshunedfunc ()
+function ms100func () 
 {
-    mshuned++
-    if(mshuned >= 10)
-    {
-        mshuned = 0;
-    }
-    digit[4].textContent = mshuned;
+  ms100++
+  if(ms100 >= 10) {
+    ms100 = 0;
+  }
+  digit[4].innerHTML = ms100; 
 }
 
-function sec1func ()
+function sec1func () 
 {
-    sec1++
-    if(sec1 >= 10)
-    {
-        sec1 = 0;
-    }
-    digit[1].textContent = sec1;
+  sec1++
+  if(sec1  >= 10) {
+    sec1 = 0;
+  }
+  digit[1].innerHTML = sec1; 
 }
 
-function sec10func ()
+function sec10func () 
 {
-    sec10++
-    if(sec10 >= 10)
-    {
-        sec10 = 0;
-    }
-    digit[0].textContent = sec10;
+  sec10++
+  if(sec10  >= 10) {
+    sec10 = 0;
+  }
+  digit[0].innerHTML = sec10; 
 }
 
-
-setInterval(mshuned, 10)
-setInterval(mstenfunc, 100)
-setInterval(sec10func, 1000)
+setInterval(ms100, 10)
+setInterval(ms10func, 100)
+setInterval(sec1func, 1000)
 setInterval(sec10func, 10000)
